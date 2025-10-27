@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installing and Using RStudio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fafb;
+      color: #1f2937;
+    }
+    header {
+      background-color: #0f766e;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    h2 {
+      color: #0f766e;
+      margin-top: 2rem;
+    }
+    ol, ul {
+      margin-left: 1.5rem;
+    }
+    code {
+      background: #f1f5f9;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    pre {
+      background: #0f172a;
+      color: #e5e7eb;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    a {
+      color: #0a66c2;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .highlight {
+      background: #ecfdf5;
+      padding: 1rem;
+      border-left: 5px solid #0f766e;
+      border-radius: 6px;
+      margin: 1rem 0;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🧭 Installing and Using RStudio</h1>
+    <p>A simple step-by-step guide for beginners using R and Quarto</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Step 1: Download and Install R</h2>
+      <p>Before installing RStudio, you must first install <strong>R</strong>, the programming language itself.</p>
+      <ol>
+        <li>Go to the official R website: <a href="https://cran.r-project.org" target="_blank">https://cran.r-project.org</a></li>
+        <li>Click <strong>Download R for your operating system</strong>:
+          <ul>
+            <li>Windows → “Download R for Windows”</li>
+            <li>macOS → “Download R for macOS”</li>
+            <li>Linux → “Download R for Linux”</li>
+          </ul>
+        </li>
+        <li>Choose the latest version and follow the installation wizard.</li>
+        <li>Once installed, confirm R is working by typing:</li>
+      </ol>
+      <pre><code class="language-r">version</code></pre>
+    </section>
+
+    <section>
+      <h2>Step 2: Download and Install RStudio</h2>
+      <ol>
+        <li>Visit the RStudio (Posit) website: <a href="https://posit.co/download/rstudio" target="_blank">https://posit.co/download/rstudio</a></li>
+        <li>Scroll down and select the <strong>RStudio Desktop (Free)</strong> version.</li>
+        <li>Choose your operating system and download the installer.</li>
+        <li>Run the installer and follow the setup wizard with default settings.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Step 3: Launch RStudio</h2>
+      <p>Open RStudio from your applications or Start menu. You’ll see four main panes:</p>
+      <ul>
+        <li><strong>Source Editor</strong> (top-left) — where you write and edit code</li>
+        <li><strong>Console</strong> (bottom-left) — where R executes your commands</li>
+        <li><strong>Environment/History</strong> (top-right) — tracks data and variables</li>
+        <li><strong>Files/Plots/Packages/Help/Viewer</strong> (bottom-right) — for navigation and visualizations</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Step 4: Write and Run Your First R Script</h2>
+      <ol>
+        <li>Click <strong>File → New File → R Script</strong>.</li>
+        <li>Type this simple command:</li>
+      </ol>
+      <pre><code class="language-r">print("Hello, RStudio!")</code></pre>
+      <p>Press <code>Ctrl + Enter</code> (Windows) or <code>Cmd + Enter</code> (Mac) to run the line.  
+      The output will appear in the Console pane.</p>
+    </section>
+
+    <section>
+      <h2>Step 5: Install Essential R Packages</h2>
+      <p>Enhance your workflow by installing popular packages for data science and visualization:</p>
+      <pre><code class="language-r">install.packages(c("tidyverse", "ggplot2", "plotly", "dplyr", "quarto"))</code></pre>
+      <p>Load a package in your session using:</p>
+      <pre><code class="language-r">library(ggplot2)</code></pre>
+    </section>
+
+    <section>
+      <h2>Step 6: Connect and Use Quarto in RStudio</h2>
+      <p>Quarto is built into RStudio (2022.07+). To confirm:</p>
+      <ol>
+        <li>Click <strong>File → New File → Quarto Document</strong>.</li>
+        <li>Select <strong>HTML</strong> as the output format and click <strong>Create</strong>.</li>
+        <li>Click <strong>Render</strong> to generate your first Quarto report.</li>
+      </ol>
+      <p>If you don’t see the “Quarto” option, install it manually:</p>
+      <pre><code class="language-r">install.packages("quarto")</code></pre>
+      <p>Then restart RStudio.</p>
+    </section>
+
+    <section>
+      <h2>Step 7: Organize Your R Projects</h2>
+      <ol>
+        <li>Create a project folder (e.g., <code>MyQuartoDashboard</code>).</li>
+        <li>In RStudio, go to <strong>File → New Project → Existing Directory</strong>.</li>
+        <li>Select your folder and click <strong>Create Project</strong>.</li>
+        <li>Keep all files — <code>.R</code>, <code>.qmd</code>, <code>.csv</code> — in one place for a reproducible workflow.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Step 8: Save and Export Your Work</h2>
+      <ul>
+        <li>Save scripts with <code>Ctrl + S</code> or <code>Cmd + S</code>.</li>
+        <li>Export plots from the <strong>Plots</strong> tab → <strong>Export → Save as Image or PDF</strong>.</li>
+        <li>Render <code>.qmd</code> documents as <strong>HTML, PDF, or Word</strong> using the <strong>Render</strong> button.</li>
+      </ul>
+    </section>
+
+    <div class="highlight">
+      <strong>✅ You’re Ready to Code and Create Dashboards!</strong>
+      <p>With R and RStudio installed, you now have:</p>
+      <ul>
+        <li>A full environment for <strong>data analysis and visualization</strong></li>
+        <li>Built-in support for <strong>Quarto dashboards and reports</strong></li>
+        <li>All tools needed to publish professional, reproducible analytics</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Strategic Insights & Analytics — Guide by Dr. Olugbenga Asaolu
+  </footer>
+</body>
+</html>
